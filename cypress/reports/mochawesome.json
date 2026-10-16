@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-10-16T09:57:14.145Z",
+    "end": "2026-10-16T09:57:32.831Z",
+    "duration": 18686,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8dd35497-60ab-4b30-9acc-c8eeec7c6590",
+      "title": "",
+      "fullFile": "cypress/e2e/amazon_search.cy.js",
+      "file": "cypress/e2e/amazon_search.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "95eba43a-268e-436d-9ac5-b04f0c65cc2a",
+          "title": "Final Project Bootcamp Cypress AfterOffice Batch #1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Harus berhasil melakukan pencarian, sorting, dan verifikasi detail produk",
+              "fullTitle": "Final Project Bootcamp Cypress AfterOffice Batch #1 Harus berhasil melakukan pencarian, sorting, dan verifikasi detail produk",
+              "timedOut": null,
+              "duration": 16556,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// 1. Buka situs Amazon\n_searchPage.default.navigate();\n// 2. Cari item 'chair'\n_searchPage.default.searchItem('chair');\n// 3. Urutkan berdasarkan harga termahal\n_searchPage.default.sortByPriceHighToLow();\n// 4. Pilih item paling kanan baris pertama (bukan iklan) & ambil datanya\n_searchPage.default.selectFirstRowRightmostProduct();\n// 5. Validasi ekspektasi nama barang dan harga di halaman detail\ncy.then(() => {\n  _productDetailPage.default.verifyProductDetails(this.searchPageTitle, this.searchPagePrice);\n});",
+              "err": {},
+              "uuid": "5aea5aa1-52f5-4d84-9392-58bf1f11b0a0",
+              "parentUUID": "95eba43a-268e-436d-9ac5-b04f0c65cc2a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5aea5aa1-52f5-4d84-9392-58bf1f11b0a0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16556,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
